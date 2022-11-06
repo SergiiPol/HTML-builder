@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const rootFolder = path.join(__dirname, "secret-folder");
+const routFolder = path.join(__dirname, "secret-folder");
 
 const fileBasename = (pathFile, ext) => {
     return path.basename(pathFile, ext)
@@ -11,10 +11,10 @@ const fileExtension = (pathFile) => {
     return ext.slice(1);
 }
 
-fs.readdir(rootFolder, (err, data) => {
+fs.readdir(routFolder, (err, data) => {
     if(err) console.error(err.message);
     data.forEach(item => {
-        const pathFile = path.join(rootFolder, `${item}`);
+        const pathFile = path.join(routFolder, `${item}`);
         fs.stat(pathFile, (error, stats) => {
             if(error){
                 console.log(error);

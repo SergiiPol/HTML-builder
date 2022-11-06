@@ -1,8 +1,8 @@
 const fs = require("fs");
 const readline = require("readline");
 const path = require("path");
-const rootFile = path.join(__dirname, "text.txt");
-const textLine = fs.createWriteStream(rootFile, {encoding: 'utf-8'});
+const routFile = path.join(__dirname, "text.txt");
+const textLine = fs.createWriteStream(routFile, {encoding: 'utf-8'});
 
 const rl = readline.createInterface({
     input: process.stdin,
